@@ -25,13 +25,16 @@ export default function Home() {
     const newRenderer = buildRender(setRenderer);
     const newCamera = buildCamera(setCamera);
     const newScene = startScene(setScene);
-    
+    let animationFrameId: number;
+
     const cameraTarget = new THREE.Vector3(0, 0, 0);
     const clock = new THREE.Clock();
 
     if (newRenderer && newCamera && newScene) {
 
       function animate() {
+        animationFrameId = requestAnimationFrame(animate);
+
         requestAnimationFrame(animate);
 
         // animation
@@ -97,6 +100,12 @@ export default function Home() {
       newScene.add(asteroidOuterMesh);
       
       animate();
+
+      return () => {
+        cancelAnimationFrame(animationFrameId);
+        controls.dispose();
+        newRenderer.dispose();
+      };
     }
   }, [])
 
