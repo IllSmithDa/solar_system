@@ -7,6 +7,25 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
+## Issues regarding Github pages
+
+  1. Issues with returning code 404 when retrieving resources in Github pages
+
+    - https://stackoverflow.com/questions/68497926/how-can-i-fix-failing-to-load-resource-status-404-github-pages
+
+  2. Using HashRouter instead of Browser Router for Github pages as it only accepts accept static application
+
+    - https://stackoverflow.com/questions/71984401/react-router-not-working-with-github-pages
+
+  3. General help for uploading to Github pages for React.js applicaiton
+
+    - https://stackoverflow.com/questions/69708281/how-can-i-host-my-react-application-using-github
+    
+  4. Other Help for Deployment
+
+    - https://create-react-app.dev/docs/deployment/
+  
+
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
