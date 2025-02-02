@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useEffect, useState } from "react";
 import * as THREE from "three";
-
 import buildRender from "../../helper/renderer";
 import buildCamera from "../../helper/camera";
 import startScene from "../../helper/scene";
