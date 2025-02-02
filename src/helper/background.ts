@@ -7,7 +7,8 @@ import pyPath from '../assets/stars/galaxy/milky_way/cube_map/py.png';
 import nyPath from '../assets/stars/galaxy/milky_way/cube_map/ny.png';
 import pzPath from '../assets/stars/galaxy/milky_way/cube_map/pz.png';
 import nzPath from '../assets/stars/galaxy/milky_way/cube_map/nz.png';
-export default function generateCubeMap(
+
+export default function generateSpaceCubeMap(
   scene: THREE.Scene,
 ) {
   scene.background = new THREE.CubeTextureLoader()

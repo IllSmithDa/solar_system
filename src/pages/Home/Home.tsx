@@ -11,10 +11,9 @@ import createSimpleMat, { createRingMat, createSunMat } from "../../helper/mater
 import createSimpleMesh, { createMoonMesh, createRingMesh } from "../../helper/mesh";
 import { asteroidBelt, asteroidBeltOuter, solarData } from "../../data/starData";
 import { OrbitControls } from "three/examples/jsm/Addons.js";
-import generateCubeMap from "../../helper/background";
+import generateSpaceCubeMap from "../../helper/background";
 import Navbar from "../../components/Navbar/Navbar";
 import { createRingWithPoints } from "../../helper/particles";
-// const starpath = '../assets/stars/galaxy/milky_way/cube_map/';
 
 export default function Home() {
   const [renderer, setRenderer] = useState<THREE.WebGLRenderer>();
@@ -90,7 +89,7 @@ export default function Home() {
       controls.enableDamping = true;
       controls.dampingFactor = 0.01;
   
-      generateCubeMap(newScene);
+      generateSpaceCubeMap(newScene);
       setupLighting(newScene);
       newScene.add(asteroidMesh);
       newScene.add(asteroidOuterMesh);
