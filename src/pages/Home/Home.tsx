@@ -6,15 +6,15 @@ import buildRender from "../../helper/renderer";
 import buildCamera from "../../helper/camera";
 import startScene from "../../helper/scene";
 import setupLighting from "../../helper/lighting";
-import createSimpleSphere, { createAsteroidGeo, createRing } from "../../helper/geometry";
-import createSimpleMat, { createAsteroidMat, createRingMat, createSunMat } from "../../helper/materials";
+import createSimpleSphere, { createRing } from "../../helper/geometry";
+import createSimpleMat, { createRingMat, createSunMat } from "../../helper/materials";
 import createSimpleMesh, { createMoonMesh, createRingMesh } from "../../helper/mesh";
 import { asteroidBelt, asteroidBeltOuter, solarData } from "../../data/starData";
 import { OrbitControls } from "three/examples/jsm/Addons.js";
 import generateCubeMap from "../../helper/background";
 import Navbar from "../../components/Navbar/Navbar";
 import { createRingWithPoints } from "../../helper/particles";
-const starpath = '../assets/stars/galaxy/milky_way/cube_map/';
+// const starpath = '../assets/stars/galaxy/milky_way/cube_map/';
 
 export function meta() {
   return [
@@ -26,7 +26,7 @@ export function meta() {
 export default function Home() {
   const [renderer, setRenderer] = useState<THREE.WebGLRenderer>();
   const [camera, setCamera] = useState<THREE.PerspectiveCamera>();
-  const [scene, setScene] = useState<THREE.Scene>();
+  const [, setScene] = useState<THREE.Scene>();
 
   useEffect(() => {
     const newRenderer = buildRender(setRenderer);
@@ -98,7 +98,7 @@ export default function Home() {
       const controls = new OrbitControls(newCamera, newRenderer.domElement)
       controls.enableDamping = true;
       controls.dampingFactor = 0.01;
-      generateCubeMap(newScene, starpath)
+      generateCubeMap(newScene)
       setupLighting(newScene);
       newScene.add(asteroidMesh);
       newScene.add(asteroidOuterMesh);

@@ -9,7 +9,6 @@ import pzPath from '../assets/stars/galaxy/milky_way/cube_map/pz.png';
 import nzPath from '../assets/stars/galaxy/milky_way/cube_map/nz.png';
 export default function generateCubeMap(
   scene: THREE.Scene,
-  path: string,
 ) {
   scene.background = new THREE.CubeTextureLoader()
 	.load( [
