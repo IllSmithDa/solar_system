@@ -16,13 +16,6 @@ import Navbar from "../../components/Navbar/Navbar";
 import { createRingWithPoints } from "../../helper/particles";
 // const starpath = '../assets/stars/galaxy/milky_way/cube_map/';
 
-export function meta() {
-  return [
-    { title: "Solar System" },
-    { name: "Home Page", content: "Welcome to our Solar System!" },
-  ];
-}
-
 export default function Home() {
   const [renderer, setRenderer] = useState<THREE.WebGLRenderer>();
   const [camera, setCamera] = useState<THREE.PerspectiveCamera>();
